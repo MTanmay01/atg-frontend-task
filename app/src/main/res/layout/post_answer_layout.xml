@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/profile_shape"
+            android:src="@drawable/ic_avatar"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile_img"
+            app:layout_constraintStart_toEndOf="@id/profile_img"
+            app:layout_constraintTop_toTopOf="@id/profile_img"
+            tools:text="Someone" />
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_dot"
+            app:layout_constraintBottom_toBottomOf="@id/username"
+
+            app:layout_constraintStart_toEndOf="@id/username"
+            app:layout_constraintTop_toTopOf="@id/username" />
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/dot"
+            app:layout_constraintStart_toEndOf="@id/dot"
+            app:layout_constraintTop_toTopOf="@id/dot"
+            tools:text="2 Days Ago" />
+
+        <TextView
+            android:id="@+id/posted_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            app:layout_constraintStart_toStartOf="@id/username"
+            app:layout_constraintTop_toBottomOf="@id/post_time"
+            app:layout_constraintEnd_toEndOf="@id/option_more"
+
+            tools:text="i got rickrolled" />
+
+        <ImageView
+            android:id="@+id/option_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_more"
+
+            app:tint="#9ea8de"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posted_answer" />
+
+        <TextView
+            android:id="@+id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:drawableTint="#9ea8de"
+            android:layout_marginEnd="15dp"
+            android:drawableEnd="@drawable/ic_like"
+
+            app:layout_constraintBottom_toBottomOf="@id/option_more"
+
+            app:layout_constraintEnd_toStartOf="@id/option_more"
+            app:layout_constraintTop_toTopOf="@id/option_more" />
+
+        <ImageView
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_reply"
+            app:layout_constraintBottom_toBottomOf="@id/like_count"
+
+            app:layout_constraintEnd_toStartOf="@id/like_count"
+
+            app:layout_constraintTop_toTopOf="@id/like_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

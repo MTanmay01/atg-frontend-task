@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" >
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:backgroundTint="#7C55CD"
+        app:borderWidth="0dp"
+        app:fabCustomSize="40dp"
+        android:src="@drawable/ic_avatar"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/questioner_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginStart="5dp"
+
+        android:backgroundTint="#7C55CD"
+        app:borderWidth="0dp"
+        app:fabCustomSize="40dp"
+        android:src="@drawable/ic_location" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toEndOf="@id/questioner_location"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginStart="5dp"
+
+        android:backgroundTint="#7C55CD"
+        app:borderWidth="0dp"
+        app:fabCustomSize="40dp"
+        android:src="@drawable/ic_search" />
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="POST"
+        app:icon="@drawable/ic_add"
+        app:backgroundTint="#05D5C5"
+        android:background="@drawable/circle" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

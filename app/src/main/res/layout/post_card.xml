@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:cardCornerRadius="20dp"
+    android:elevation="10dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:src="@drawable/ic_location" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_more" />
+
+        <ImageView
+            android:id="@+id/questioner_profile_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+
+            android:background="@drawable/profile_shape"
+            android:src="@drawable/ic_avatar" />
+
+        <TextView
+            android:id="@+id/questioner_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/questioner_profile_img"
+            app:layout_constraintTop_toTopOf="@id/questioner_profile_img"
+            android:layout_marginStart="5dp"
+            tools:text="Someone"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+
+            app:layout_constraintStart_toEndOf="@id/questioner_username"
+            app:layout_constraintTop_toTopOf="@id/questioner_username"
+            app:layout_constraintBottom_toBottomOf="@id/questioner_username"
+
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_dot" />
+
+        <TextView
+            android:id="@+id/questioner_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/dot"
+            app:layout_constraintTop_toTopOf="@id/dot"
+            app:layout_constraintBottom_toBottomOf="@id/dot"
+            android:layout_marginStart="5dp"
+            tools:text="2 Days Ago"/>
+
+        <TextView
+            android:id="@+id/questioner_location"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+
+            app:layout_constraintStart_toEndOf="@id/answerer_profile_img"
+            app:layout_constraintTop_toBottomOf="@id/questioner_username"
+
+            app:drawableStartCompat="@drawable/ic_location"
+            tools:text="Marathahalli" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questioner_location"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+
+            tools:text="Where can i get hot water bag for body relief pain in marathahalli?"
+            android:textSize="25dp"
+            android:textColor="#4E2EA8"/>
+
+        <ImageView
+            android:id="@+id/answerer_profile_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/profile_shape"
+            android:src="@drawable/ic_avatar" />
+
+        <TextView
+            android:id="@+id/answerer_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/answerer_profile_img"
+            app:layout_constraintTop_toTopOf="@id/answerer_profile_img"
+            android:layout_marginStart="5dp"
+            tools:text="Someone"/>
+
+        <ImageView
+            android:id="@+id/answerer_dot"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+
+            app:layout_constraintStart_toEndOf="@id/answerer_username"
+            app:layout_constraintTop_toTopOf="@id/answerer_username"
+            app:layout_constraintBottom_toBottomOf="@id/answerer_username"
+
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_dot" />
+
+        <TextView
+            android:id="@+id/answerer_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/answerer_dot"
+            app:layout_constraintTop_toTopOf="@id/answerer_dot"
+            app:layout_constraintBottom_toBottomOf="@id/answerer_dot"
+            android:layout_marginStart="5dp"
+            tools:text="2 Days Ago"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            app:layout_constraintStart_toEndOf="@id/answerer_post_time"
+            app:layout_constraintTop_toTopOf="@id/answerer_post_time"
+            app:layout_constraintBottom_toBottomOf="@id/answerer_post_time"
+
+            android:backgroundTint="#4dd3b6"
+            android:layout_marginStart="5dp"
+            android:clickable="false"
+            android:textSize="11sp"
+            android:text="FIRST ANSWER" />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/answerer_username"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+
+            tools:text="At Apollo Pharmacy, you can get hot and cold gel bag. You can put the bag in boiling water to heat and then use it for your pains."
+            android:textColor="#4E2EA8" />
+
+        <TextView
+            android:id="@+id/answer_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/answer"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            tools:text="5 Answers" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/answer_count"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginTop="15dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/like"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+
+            android:layout_marginTop="10dp"
+
+            android:textColor="#7c87cc"
+            android:drawableTint="#7c87cc"
+            android:drawableStart="@drawable/ic_star"
+            android:gravity="center_vertical"
+            android:text="Save" />
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/save"
+            app:layout_constraintEnd_toStartOf="@id/answer_option"
+            app:layout_constraintTop_toTopOf="@id/save"
+            app:layout_constraintBottom_toBottomOf="@id/save"
+
+            android:textColor="#7c87cc"
+            android:drawableTint="#7c87cc"
+            android:drawableStart="@drawable/ic_like"
+            android:gravity="center_vertical"
+            android:text="Like"
+            android:src="@drawable/ic_location"/>
+
+        <TextView
+            android:id="@+id/answer_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/like"
+            app:layout_constraintTop_toTopOf="@id/like"
+            app:layout_constraintBottom_toBottomOf="@id/like"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:textColor="#ff8a64"
+            android:drawableTint="#ff8a64"
+            android:drawableStart="@drawable/ic_answer"
+            android:gravity="center_vertical"
+            android:text="Answer"
+            android:backgroundTint="#FFFFFF"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
